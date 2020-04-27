@@ -1,12 +1,17 @@
 const Pool = require("pg").Pool;
 const pool = new Pool({
-  user: "momo",
-  host: "localhost",
-  database: "api",
-  password: "password",
-  port: 5432,
+  user: "movienewsletter",
+  host: process.env.host,
+  database: process.env.database,
+  password: process.env.password,
+  port: process.env.port,
 });
 
-pool
-  .query(`SELECT * FROM TESTS`)
-  .then((res) => console.log("name", res.rows[0]));
+//test if the dummy test table returns anything
+function testDbConnection() {
+  return pool.query(`SELECT * FROM TESTS`);
+}
+
+export default {
+  testDbConnection,
+};

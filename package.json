@@ -6,12 +6,15 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node ./index.js"
+    "start": "nodemon --exec babel-node ./index.js",
+    "seed": "nodemon --exec babel-node initializeDb.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "pg": "^8.0.3",
     "uuid": "^7.0.3"

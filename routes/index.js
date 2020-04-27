@@ -1,4 +1,4 @@
-import test from "./test.js";
+import testDbConnection from "./testDbConnection";
 export default {
-  test,
+  testDbConnection,
 };

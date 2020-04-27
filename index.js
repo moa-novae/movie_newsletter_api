@@ -1,5 +1,5 @@
+import "dotenv/config";
 import routes from "./routes/index.js";
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -11,7 +11,7 @@ app.use(
     extended: true,
   })
 );
-app.use("/test", routes.test);
+app.use("/testDbConnection", routes.testDbConnection);
 app.get("/", (request, response) => {
   response.json({ info: "Node.js, Express, and Postgres API" });
 });
